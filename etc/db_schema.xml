@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="cms_block">
+        <column xsi:type="text" name="restricted_customer_groups" nullable="true" comment="Restricted Customer Group"/>
+    </table>
+    <table name="cms_page">
+        <column xsi:type="text" name="restricted_customer_groups" nullable="true" comment="Restricted Customer Group"/>
+    </table>
+</schema>
