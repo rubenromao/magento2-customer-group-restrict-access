@@ -75,7 +75,7 @@ class Page extends \Magento\Cms\Model\Page
 
                 // redirect the customer to a 404 page
                 $resultRedirect = $this->responseFactory->create();
-                $resultRedirect->setRedirect($this->url->getUrl('/restricted-content/'))->sendResponse('200');
+                $resultRedirect->setRedirect($this->url->getUrl('restricted-content'))->sendResponse('200');
                 exit();
             }
         }
