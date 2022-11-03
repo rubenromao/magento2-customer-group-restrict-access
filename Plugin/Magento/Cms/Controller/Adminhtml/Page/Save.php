@@ -35,7 +35,7 @@ class Save
      * @throws LocalizedException
      * @throws \Exception
      */
-    public function afterExecute(OriginalClass $subject, $result): mixed
+    public function afterExecute(OriginalClass $subject, $result)
     {
         $data = $subject->getRequest()->getPostValue();
         if ($data['page_restrict_customer_group']) {
@@ -52,6 +52,7 @@ class Save
             $model->setData('page_restrict_customer_group', $restrictGroups);
             $model->save();
         }
+
         return $result;
     }
 

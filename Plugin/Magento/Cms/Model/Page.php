@@ -17,6 +17,8 @@ use Magento\Framework\UrlInterface;
  */
 class Page
 {
+    public const ADMINISTRATOR_ROLE_NAME = 'Administrators';
+
     /**
      * Page Constructor.
      *
@@ -32,6 +34,7 @@ class Page
         private Session          $customerSession,
         private Context          $httpContext,
         private ManagerInterface $messageManager,
+        private \Magento\Backend\Model\Auth\Session $adminSession,
     ) {
     }
 
@@ -39,7 +42,7 @@ class Page
      * @param OriginalClass $subject
      * @return void
      */
-    public function beforeGetContent(OriginalClass $subject): void
+    public function beforeGetContent(OriginalClass $subject)
     {
         // customer by session
         $customer = $this->customerSession->getCustomer();
@@ -50,6 +53,12 @@ class Page
             $customerGroupId = $customer->getGroupId();
         }
 
+        // if current session user is administrator set group id to null
+        if ($this->adminSession->getUser() !== null
+            && $this->adminSession->getUser()->getRole()->getRoleName() === self::ADMINISTRATOR_ROLE_NAME) {
+            $customerGroupId = null;
+        }
+
         // get customer group ids for current product
         if (null !== $this->httpContext->getValue(CustomerContext::CONTEXT_GROUP)) {
 
@@ -57,6 +66,7 @@ class Page
             $customerGroupIds = $subject->getData('page_restrict_customer_group');
 
             if (!is_array($customerGroupIds) && null !== $customerGroupIds) {
+
                 // convert the string to array of
                 $customerGroupIds = explode(',', $customerGroupIds);
             }
@@ -65,8 +75,9 @@ class Page
             if (null !== $customerGroupIds) {
 
                 if (in_array($customerGroupId, $customerGroupIds)) {
+
                     // restricted access message
-                    $this->messageManager->addErrorMessage('Access restricted');
+                    $this->messageManager->addErrorMessage('Restricted Access');
 
                     // redirect the restricted content page
                     $resultRedirect = $this->responseFactory->create();
