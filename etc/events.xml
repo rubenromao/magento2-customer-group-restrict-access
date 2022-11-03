@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
     <event name="catalog_controller_product_view">
         <observer name="rubenromao_db_second_test_restrict_product_customer_group"
                   instance="Rubenromao\DbSecondTest\Observer\CatalogProductView" />
     </event>
+
     <event name="catalog_controller_category_init_after">
         <observer name="rubenromao_db_second_test_restrict_category_customer_group"
                   instance="Rubenromao\DbSecondTest\Observer\CatalogCategoryInitAfter" />
     </event>
+
 </config>
