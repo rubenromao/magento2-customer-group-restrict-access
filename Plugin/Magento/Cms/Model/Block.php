@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model;
 
-use Magento\Cms\Model\Page as OriginalClass;
+use Magento\Cms\Model\Block as OriginalClass;
 use Rubenromao\DbSecondTest\Model\HandleContentRestriction;
 
 /**
- * This plugin redirects the customer to the cms page "restricted-content"
- * if the customer isn't authorised to see the requested CMS Page
+ * This plugin redirects the customer to the cms block "restricted-content"
+ * if the customer isn't authorised to see the requested CMS Block
  */
-class Page
+class Block
 {
-    public const ATTRIBUTE_CODE = 'page_restrict_customer_group';
+    public const ATTRIBUTE_CODE = 'block_restrict_customer_group';
 
     /**
-     * Page Constructor.
+     * Block Constructor.
      *
      * @param HandleContentRestriction $contentRestriction
      */

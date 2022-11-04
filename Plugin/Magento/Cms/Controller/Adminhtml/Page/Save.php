@@ -38,6 +38,8 @@ class Save
     public function afterExecute(OriginalClass $subject, $result)
     {
         $data = $subject->getRequest()->getPostValue();
+
+        // make sure that the field was sent.
         if ($data['page_restrict_customer_group']) {
             $restrictGroups = $this->checkCustomerGroupValueSet($data);
 

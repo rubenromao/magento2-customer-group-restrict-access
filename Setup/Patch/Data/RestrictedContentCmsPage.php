@@ -8,6 +8,9 @@ use Magento\Cms\Model\PageRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
+/**
+ * Create CMS Page to display restricted content message.
+ */
 class RestrictedContentCmsPage implements DataPatchInterface
 {
     private const IDENTIFIER = 'restricted-content';
@@ -39,7 +42,7 @@ class RestrictedContentCmsPage implements DataPatchInterface
             ->setIdentifier(self::IDENTIFIER)
             ->setIsActive(true)
             ->setPageLayout('1column')
-            ->setContent('Your Customer Group isn\'t authorised to access the requested content.');
+            ->setContent(__('Your Customer Group isn\'t authorised to access the requested content.'));
         $this->pageRepository->save($page);
 
         $this->moduleDataSetup->endSetup();

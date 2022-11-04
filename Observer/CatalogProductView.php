@@ -31,7 +31,9 @@ class CatalogProductView implements ObserverInterface
     {
         $product = $observer->getProduct();
         if ($product) {
-            $this->contentRestriction->isRestrictedContent($product, self::ATTRIBUTE_CODE);
+
+            // this method will check if the content is restricted for the customer's group
+            $this->contentRestriction->isRestrictedCatalogContent($product, self::ATTRIBUTE_CODE);
         }
 
         return $this;

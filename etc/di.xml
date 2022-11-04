@@ -9,12 +9,12 @@
         <plugin name="rubenromao_db_second_test_restrict_page_save_admin"
                 type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Page\Save"/>
     </type>
-<!--    <type name="Magento\Cms\Model\Block">-->
-<!--        <plugin name="rubenromao_db_second_test_restrict_block"-->
-<!--                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Block"/>-->
-<!--    </type>-->
-<!--    <type name="Magento\Cms\Controller\Adminhtml\Block\Save">-->
-<!--        <plugin name="rubenromao_db_second_test_restrict_block_save_admin"-->
-<!--                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Block\Save"/>-->
-<!--    </type>-->
+    <type name="Magento\Cms\Model\Block">
+        <plugin name="rubenromao_db_second_test_restrict_block"
+                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Block"/>
+    </type>
+    <type name="Magento\Cms\Controller\Adminhtml\Block\Save">
+        <plugin name="rubenromao_db_second_test_restrict_block_save_admin"
+                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Block\Save"/>
+    </type>
 </config>

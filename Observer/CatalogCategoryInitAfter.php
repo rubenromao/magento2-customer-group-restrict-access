@@ -31,7 +31,9 @@ class CatalogCategoryInitAfter implements ObserverInterface
     {
         $category = $observer->getCategory();
         if ($category) {
-            $this->contentRestriction->isRestrictedContent($category, self::ATTRIBUTE_CODE);
+
+            // this method will check if the content is restricted for the customer's group
+            $this->contentRestriction->isRestrictedCatalogContent($category, self::ATTRIBUTE_CODE);
         }
 
         return $this;
