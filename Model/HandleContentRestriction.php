@@ -8,9 +8,12 @@ use Magento\Customer\Model\Context as CustomerContext;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Http\Context;
 use Magento\Framework\App\ResponseFactory;
-use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\UrlInterface;
 
+/**
+ * This class handles the customer access by his group.
+ * It can be by catalog or CMS.
+ */
 class HandleContentRestriction
 {
     public const ADMINISTRATOR_ROLE_NAME = 'Administrators';
@@ -24,7 +27,6 @@ class HandleContentRestriction
      * @param Session $customerSession
      * @param Context $httpContext
      * @param AdminSession $adminSession
-     * @param ManagerInterface $messageManager
      */
     public function __construct(
         private ResponseFactory $responseFactory,
@@ -32,7 +34,6 @@ class HandleContentRestriction
         private Session $customerSession,
         private Context $httpContext,
         private AdminSession $adminSession,
-        private ManagerInterface $messageManager,
     ) {
     }
 
@@ -63,9 +64,6 @@ class HandleContentRestriction
 
             // if the customer group id is set, redirect to a restrict-content page
             if (in_array($customerGroupId, $customerGroupIds)) {
-
-                // restricted access message
-                $this->messageManager->addErrorMessage(__('Access restricted'));
 
                 // redirect the customer to a 404 page
                 $resultRedirect = $this->responseFactory->create();
@@ -117,15 +115,12 @@ class HandleContentRestriction
             if (null !== $customerGroupIds) {
                 if (in_array($customerGroupId, $customerGroupIds)) {
 
-                    // restricted access message
-                    $this->messageManager->addErrorMessage(__('Access restricted'));
-
-                    // redirect the customer to a 404 page
+                    // redirect the customer to a restricted
+                    // content message page
                     $resultRedirect = $this->responseFactory->create();
                     $resultRedirect->setRedirect($this->url->getUrl(
                         self::RESTRICTED_CONTENT_PAGE
                     ))->sendResponse('200');
-                    exit();
                 }
             }
         }

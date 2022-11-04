@@ -7,6 +7,9 @@ use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Rubenromao\DbSecondTest\Model\HandleContentRestriction;
 
+/**
+ * Observer to check if the category can be shown.
+ */
 class CatalogCategoryInitAfter implements ObserverInterface
 {
     private const ATTRIBUTE_CODE = 'category_customer_group';

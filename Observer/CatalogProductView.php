@@ -7,6 +7,9 @@ use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Rubenromao\DbSecondTest\Model\HandleContentRestriction;
 
+/**
+ * Observer to check if the product can be shown.
+ */
 class CatalogProductView implements ObserverInterface
 {
     private const ATTRIBUTE_CODE = 'product_customer_group';
