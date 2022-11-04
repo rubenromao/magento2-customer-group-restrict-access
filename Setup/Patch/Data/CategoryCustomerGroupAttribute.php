@@ -12,10 +12,12 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Rubenromao\DbSecondTest\Model\Attribute\Source\CustomerGroup;
 
+/**
+ * Create custom category attribute with customer groups.
+ */
 class CategoryCustomerGroupAttribute implements DataPatchInterface
 {
     private const ATTRIBUTE_CODE = 'category_customer_group';
-    private const ATTRIBUTE_LABEL = 'Restrict Visibility Of Category To Customer Group';
 
     /**
      * CategoryCustomerGroupAttribute constructor.
@@ -45,7 +47,7 @@ class CategoryCustomerGroupAttribute implements DataPatchInterface
             [
                 'group' => 'General Information',
                 'type' => 'varchar',
-                'label' => __(self::ATTRIBUTE_LABEL),
+                'label' => __('Restrict Visibility Of Category To Customer Group'),
                 'input' => 'multiselect',
                 'source' => CustomerGroup::class,
                 'backend' => ArrayBackend::class,

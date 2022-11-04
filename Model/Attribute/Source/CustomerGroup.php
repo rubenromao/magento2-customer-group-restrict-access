@@ -6,6 +6,9 @@ namespace Rubenromao\DbSecondTest\Model\Attribute\Source;
 use Magento\Customer\Model\ResourceModel\Group\CollectionFactory;
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
+/**
+ * Source model with array with customer groups.
+ */
 class CustomerGroup extends AbstractSource
 {
     /**

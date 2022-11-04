@@ -62,9 +62,9 @@ class Block extends \Magento\Cms\Model\Block
     {
         $customerGroupId = $this->httpContext->getValue(CustomerContext::CONTEXT_GROUP);
 
-        if (!is_null($this->getNotVisibleCustomerGroup())) {
+        if (!is_null($this->getRestrictCustomerGroup())) {
 
-            $notVisibleGroup = explode(',', $this->getNotVisibleCustomerGroup());
+            $notVisibleGroup = explode(',', $this->getRestrictCustomerGroup());
 
             if (in_array($customerGroupId, $notVisibleGroup)) {
 

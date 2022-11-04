@@ -21,7 +21,7 @@ interface BlockInterface
     const CREATION_TIME = 'creation_time';
     const UPDATE_TIME   = 'update_time';
     const IS_ACTIVE     = 'is_active';
-    const NOT_VISIBLE_CUSTOMER_GROUP = 'restricted_customer_groups';
+    const RESTRICT_CUSTOMER_GROUP = 'restrict_customer_group';
 
     /**
      * Get ID
