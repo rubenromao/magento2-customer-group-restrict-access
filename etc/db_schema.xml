@@ -1,17 +1,10 @@
 <?xml version="1.0"?>
-<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-    <table name="cms_page">
-        <column xsi:type="varchar"
-                name="page_restrict_customer_group"
-                nullable="true"
-                length="100"
-                comment="Customer Groups Restricted Pages"/>
-    </table>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="cms_block">
-        <column xsi:type="text"
-                name="block_restrict_customer_group"
-                nullable="true"
-                length="100"
-                comment="Customer Groups Restricted Blocks"/>
+        <column xsi:type="text" name="restricted_customer_groups" nullable="true" comment="Restricted Customer Group"/>
+    </table>
+    <table name="cms_page">
+        <column xsi:type="text" name="restricted_customer_groups" nullable="true" comment="Restricted Customer Group"/>
     </table>
 </schema>

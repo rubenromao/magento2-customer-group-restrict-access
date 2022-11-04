@@ -5,13 +5,7 @@
     "type": "magento2-module",
     "require": {
         "php": "^8.1",
-        "magento/framework": "*",
-        "magento/module-Backend": "*",
-        "magento/module-Catalog": "*",
-        "magento/module-Cms": "*",
-        "magento/module-Customer": "*",
-        "magento/module-Eav": "*",
-        "magento/module-ui": "*"
+        "magento/framework": "*"
     },
     "license": [
         "MIT"

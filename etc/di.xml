@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Cms\Model\Page">
-        <plugin name="rubenromao_db_second_test_restrict_page"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Page"/>
-    </type>
-    <type name="Magento\Cms\Controller\Adminhtml\Page\Save">
-        <plugin name="rubenromao_db_second_test_restrict_page_save_admin"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Page\Save"/>
-    </type>
-    <type name="Magento\Cms\Model\Block">
-        <plugin name="rubenromao_db_second_test_restrict_block"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Block"/>
-    </type>
-    <type name="Magento\Cms\Controller\Adminhtml\Block\Save">
-        <plugin name="rubenromao_db_second_test_restrict_block_save_admin"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Block\Save"/>
-    </type>
+    <preference for="Magento\Cms\Controller\Adminhtml\Block\Save"
+                type="Rubenromao\DbSecondTest\Controller\Adminhtml\Block\Save"/>
+
+    <preference for="Magento\Cms\Api\Data\BlockInterface"
+                type="Rubenromao\DbSecondTest\Api\Data\BlockInterface"/>
+
+    <preference for="Magento\Cms\Model\Block"
+                type="Rubenromao\DbSecondTest\Model\Block"/>
+
+    <preference for="Magento\Cms\Controller\Adminhtml\Page\Save"
+                type="Rubenromao\DbSecondTest\Controller\Adminhtml\Page\Save"/>
+
+    <preference for="Magento\Cms\Api\Data\PageInterface"
+                type="Rubenromao\DbSecondTest\Api\Data\PageInterface"/>
+
+    <preference for="Magento\Cms\Model\Page"
+                type="Rubenromao\DbSecondTest\Model\Page"/>
+
+<!--    <type name="Magento\Cms\Controller\Adminhtml\Block\Save">-->
+<!--        <plugin name="rubenromao_dbsecondtest_foo" type="Rubenromao\DbSecondTest\Plugin\Foo"/>-->
+<!--    </type>-->
 </config>

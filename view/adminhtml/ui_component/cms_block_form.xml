@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <fieldset name="general">
-        <field name="block_restrict_customer_group" sortOrder="20" >
+        <field name="restricted_customer_groups" sortOrder="20" >
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">Magento\Customer\Ui\Component\Listing\Column\Group\Options</item>
                 <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Restricted for customers group</item>
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string" translate="true">Restricted For Customers Group</item>
                     <item name="formElement" xsi:type="string">multiselect</item>
-                    <item name="source" xsi:type="string">page</item>
-                    <item name="dataScope" xsi:type="string">block_restrict_customer_group</item>
+                    <item name="source" xsi:type="string">block</item>
+                    <item name="dataScope" xsi:type="string">restricted_customer_groups</item>
                 </item>
             </argument>
         </field>
