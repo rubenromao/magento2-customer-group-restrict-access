@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Model;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Model;
 
 use Magento\Backend\Model\Auth\Session as AdminSession;
 use Magento\Customer\Model\Context as CustomerContext;

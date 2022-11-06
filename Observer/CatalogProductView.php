@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Observer;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Rubenromao\DbSecondTest\Model\HandleContentRestriction;
+use Rubenromao\Magento2CustomerGroupRestrictAccess\Model\HandleContentRestriction;
 
 /**
  * Observer to check if the product can be shown.

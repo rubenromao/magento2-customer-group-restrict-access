@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Setup\Patch\Data;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Setup\Patch\Data;
 
 use Magento\Catalog\Model\Category;
 use Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend;
@@ -10,7 +10,7 @@ use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Rubenromao\DbSecondTest\Model\Attribute\Source\CustomerGroup;
+use Rubenromao\Magento2CustomerGroupRestrictAccess\Model\Attribute\Source\CustomerGroup;
 
 /**
  * Create custom category attribute with customer groups.

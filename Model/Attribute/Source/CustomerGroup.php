@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Model\Attribute\Source;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Model\Attribute\Source;
 
 use Magento\Customer\Model\ResourceModel\Group\CollectionFactory;
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;

@@ -1,7 +1,7 @@
 {
-    "name": "rubenromao/db-second-test",
+    "name": "rubenromao/magento2-customer-group-restrict-access",
     "version": "1.0.0",
-    "description": "This is just another a technical test for Digital Boutique.",
+    "description": "Restrict access to products, categories, pages and blocks by customer group.",
     "type": "magento2-module",
     "require": {
         "php": "^8.1",
@@ -19,7 +19,7 @@
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
-            "Rubenromao\\DbSecondTest\\": ""
+            "Rubenromao\\Magento2CustomerGroupRestrictAccess\\": ""
         }
     }
 }

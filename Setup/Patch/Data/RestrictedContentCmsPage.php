@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Setup\Patch\Data;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Setup\Patch\Data;
 
 use Magento\Cms\Model\PageFactory;
 use Magento\Cms\Model\PageRepository;

@@ -8,7 +8,7 @@
                 comment="Customer Groups Restricted Pages"/>
     </table>
     <table name="cms_block">
-        <column xsi:type="text"
+        <column xsi:type="varchar"
                 name="block_restrict_customer_group"
                 nullable="true"
                 length="100"

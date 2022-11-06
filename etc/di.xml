@@ -2,19 +2,19 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Cms\Model\Page">
-        <plugin name="rubenromao_db_second_test_restrict_page"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Page"/>
+        <plugin name="rubenromao_magento2_customer_group_restrict_access_page"
+                type="Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Model\Page"/>
     </type>
     <type name="Magento\Cms\Controller\Adminhtml\Page\Save">
-        <plugin name="rubenromao_db_second_test_restrict_page_save_admin"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Page\Save"/>
+        <plugin name="rubenromao_magento2_customer_group_restrict_access_page_save_admin"
+                type="Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Controller\Adminhtml\Page\Save"/>
     </type>
     <type name="Magento\Cms\Model\Block">
-        <plugin name="rubenromao_db_second_test_restrict_block"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model\Block"/>
+        <plugin name="rubenromao_magento2_customer_group_restrict_access_block"
+                type="Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Model\Block"/>
     </type>
     <type name="Magento\Cms\Controller\Adminhtml\Block\Save">
-        <plugin name="rubenromao_db_second_test_restrict_block_save_admin"
-                type="Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Block\Save"/>
+        <plugin name="rubenromao_magento2_customer_group_restrict_access_block_save_admin"
+                type="Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Controller\Adminhtml\Block\Save"/>
     </type>
 </config>

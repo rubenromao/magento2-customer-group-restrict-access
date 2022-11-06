@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Page;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Controller\Adminhtml\Page;
 
 use Magento\Cms\Api\PageRepositoryInterface;
 use Magento\Cms\Controller\Adminhtml\Page\Save as OriginalClass;

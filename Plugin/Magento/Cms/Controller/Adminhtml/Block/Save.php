@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Plugin\Magento\Cms\Controller\Adminhtml\Block;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Controller\Adminhtml\Block;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Cms\Controller\Adminhtml\Block\Save as OriginalClass;

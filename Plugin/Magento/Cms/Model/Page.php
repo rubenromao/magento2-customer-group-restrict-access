@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Rubenromao\DbSecondTest\Plugin\Magento\Cms\Model;
+namespace Rubenromao\Magento2CustomerGroupRestrictAccess\Plugin\Magento\Cms\Model;
 
 use Magento\Cms\Model\Page as OriginalClass;
-use Rubenromao\DbSecondTest\Model\HandleContentRestriction;
+use Rubenromao\Magento2CustomerGroupRestrictAccess\Model\HandleContentRestriction;
 
 /**
  * This plugin redirects the customer to the cms page "restricted-content"
